@@ -43,7 +43,6 @@ spatial-data-platform/
 │   ├── schemas/          # Data models
 │   │   ├── point.py      # Point schema (request/response)
 │   │   ├── polygon.py    # Polygon schema (request/response)
-│   │   └── response.py   # General response schema
 │   ├── services/         # Business logic
 │   │   ├── v1/
 │   │   │   ├── point_service.py  # Logic for point-related operations

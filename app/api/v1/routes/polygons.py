@@ -4,7 +4,6 @@ from app.services.v1.polygon_service import (
     update_polygon, delete_polygon, NotFoundError
 )
 from app.schemas.polygon import PolygonCreate, PolygonResponse, PolygonUpdate
-from app.schemas.response import DeleteResponse
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.database.db import get_db
@@ -47,7 +46,7 @@ async def patch_polygon_endpoint(polygon_id: UUID, polygon: PolygonUpdate, db: A
     return polygon_updated
 
 # Endpoint to delete a polygon by its ID
-@router.delete("/{polygon_id}", response_model=DeleteResponse)
+@router.delete("/{polygon_id}")
 async def delete_polygon_endpoint(polygon_id: UUID, db: AsyncSession = Depends(get_db)):
     await delete_polygon(db, polygon_id)
     return {"message": "Polygon deleted successfully"}

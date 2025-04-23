@@ -4,7 +4,6 @@ from app.services.v1.point_service import (
     update_point, delete_point, NotFoundError
 )
 from app.schemas.point import PointCreate, PointResponse, PointUpdate
-from app.schemas.response import DeleteResponse
 from uuid import UUID
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.database.db import get_db
@@ -47,7 +46,7 @@ async def patch_point_endpoint(point_id: UUID, point: PointUpdate, db: AsyncSess
     return point_updated
 
 # Endpoint to delete a point by ID
-@router.delete("/{point_id}", response_model=DeleteResponse)
+@router.delete("/{point_id}")
 async def delete_point_endpoint(point_id: UUID, db: AsyncSession = Depends(get_db)):
     await delete_point(db, point_id)
     return {"message": "Point deleted successfully"}
