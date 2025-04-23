@@ -148,7 +148,7 @@ Once the app is running, you can access the automatically generated API document
 ## API Endpoints
 
 ### Health
-- **GET api/v1/health/**: Retrieve server health.
+- **GET /api/v1/health/**: Retrieve server health.
 
 ### Points
 - **POST /api/v1/points/**: Create a new point.
