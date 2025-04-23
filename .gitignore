@@ -1,0 +1,95 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+*.env
+frontend/.env
+
+# VS Code settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Logs
+*.log
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Python egg metadata
+*.egg-info/
+*.egg
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Pip dependency files
+pip-wheel-metadata/
+pip-log.txt
+
+# Streamlit cache
+.streamlit/
+
+# SQLite database files
+*.db
+*.sqlite3
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# IDEs
+.idea/
+*.iml
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Docker
+*.pid
+
+# Local settings
+local_settings.py
+instance/
+
+# Test output
+test-results/
+
+# Lock files
+poetry.lock
+Pipfile.lock
+yarn.lock
+package-lock.json
+
+# files
+dir.py
+directory_structure.txt
+
+# PEM files
+*.pem

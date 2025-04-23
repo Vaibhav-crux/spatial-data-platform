@@ -1,0 +1,378 @@
+type: collection.insomnia.rest/5.0
+name: test
+meta:
+  id: wrk_0d9ac7266d2e41b48fcdb03e27fffd38
+  created: 1745237476633
+  modified: 1745237476633
+collection:
+  - name: Points
+    meta:
+      id: fld_24015a4282444a6296125b6a0829fa9f
+      created: 1745257259125
+      modified: 1745257259125
+      sortKey: -1745257259125
+    children:
+      - url: "{{local}}/v1/points/"
+        name: Create API
+        meta:
+          id: req_142a0687cf314645b35e2cfdbfb2f365
+          created: 1745237611926
+          modified: 1745343773263
+          isPrivate: false
+          sortKey: -1745257298320
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Test Point",
+              "geom": {
+                "type": "Point",
+                "coordinates": [102.0, 0.5]
+              },
+              "description": "This is a test point",
+              "status": "active"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/api/v1/points/8d87955f-8416-455e-ad03-82a7c2bda101"
+        name: Fetch Specific API
+        meta:
+          id: req_730892f29be444dcb50c46966e7b5248
+          created: 1745257148922
+          modified: 1745257753345
+          isPrivate: false
+          sortKey: -1745257298220
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/points/8d87955f-8416-455e-ad03-82a7c2bda101"
+        name: Update API
+        meta:
+          id: req_1790b47ae37f4265b1d378a2c9c1661a
+          created: 1745257616056
+          modified: 1745394903550
+          isPrivate: false
+          sortKey: -1745257616056
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+                "name": "Updated Point",
+                "geom": {
+                  "type": "Point",
+                  "coordinates": [15, 25]
+                },
+                "description": "An updated test point",
+                "status": "inactive"
+              }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/points/711063b1-1f0d-4dc0-b0b4-88d8ccecfe0c"
+        name: Delete API
+        meta:
+          id: req_525d03676009464c9cbe77fab345441d
+          created: 1745257769767
+          modified: 1745323035627
+          isPrivate: false
+          sortKey: -1745257769767
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/points/"
+        name: Fetch All API
+        meta:
+          id: req_a1685b30d23247bbb4283fe4640bbeb6
+          created: 1745258230338
+          modified: 1745258308462
+          isPrivate: false
+          sortKey: -1745258230338
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/points/02b738fa-6206-44f8-b0fb-fa399d8e1cee"
+        name: Update Specific API
+        meta:
+          id: req_a9481a38d1ac408095f43d76cf0646d5
+          created: 1745258382745
+          modified: 1745258496458
+          isPrivate: false
+          sortKey: -1745258382745
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Patched Point",
+              "description": "Updated description"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Polygons
+    meta:
+      id: fld_40a45d32ef30401c95b0db80ceee3b93
+      created: 1745257814543
+      modified: 1745257814543
+      sortKey: -1745257814543
+    children:
+      - url: "{{local}}/v1/polygons/"
+        name: Create API
+        meta:
+          id: req_d934e16d685246edb77688ab78eac125
+          created: 1745257837204
+          modified: 1745343820290
+          isPrivate: false
+          sortKey: -1745257837204
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "name": "Test Polygon",
+              "geom": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [102.0, 0.0],
+                    [103.0, 0.0],
+                    [103.0, 1.0],
+                    [102.0, 1.0],
+                    [102.0, 0.0]
+                  ]
+                ]
+              },
+              "description": "This is a test polygon",
+              "status": "active"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/polygons/39ccf45f-139f-4881-a482-434de17397f4"
+        name: Fetch Specific API
+        meta:
+          id: req_d8209bffeeb04fdba3e1ada7a8aee8cc
+          created: 1745257897059
+          modified: 1745344824163
+          isPrivate: false
+          sortKey: -1745257897059
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/polygons/3f6878aa-b647-4a59-9a41-5f8c9537ebf5"
+        name: Update API
+        meta:
+          id: req_741db856f5134ea19bb0f85c0c664336
+          created: 1745257927287
+          modified: 1745394900697
+          isPrivate: false
+          sortKey: -1745257927287
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+                "name": "Updated Polygon",
+                "geom": {
+                  "type": "Polygon",
+                  "coordinates": [[[5, 5], [15, 5], [15, 15], [5, 15], [5, 5]]]
+                },
+                "description": "An updated test polygon",
+                "status": "inactive"
+              }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/polygons/a0041193-32e9-4744-838c-b124e3bb7018"
+        name: Delete API
+        meta:
+          id: req_8f1f890c3be144769d0a61f5a0494aed
+          created: 1745257980490
+          modified: 1745323064429
+          isPrivate: false
+          sortKey: -1745257980490
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/polygons/"
+        name: Fetch All API
+        meta:
+          id: req_a7218d40143e41718ad6f832185d9311
+          created: 1745258318453
+          modified: 1745258353854
+          isPrivate: false
+          sortKey: -1745258318453
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{local}}/v1/polygons/fbd5dd34-d103-4d01-8259-f7f00b995dc0"
+        name: Update Specific API
+        meta:
+          id: req_cb75ccdeb8134d579aad2888269247ed
+          created: 1745258499663
+          modified: 1745258571457
+          isPrivate: false
+          sortKey: -1745258499663
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Patched Polygon",
+              "status": "inactive"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: "{{local}}/v1/health/"
+    name: Health Check API
+    meta:
+      id: req_837414bc8f214a90aca40b54399a2e81
+      created: 1745237486484
+      modified: 1745237675800
+      isPrivate: false
+      sortKey: -1745237486484
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e81fe6853b44ff5180c521a8bb52fffe76823cc5
+    created: 1745237476661
+    modified: 1745237476661
+environments:
+  name: Base Environment
+  meta:
+    id: env_e81fe6853b44ff5180c521a8bb52fffe76823cc5
+    created: 1745237476653
+    modified: 1745237668466
+    isPrivate: false
+  data:
+    local: http://localhost:8000/api
